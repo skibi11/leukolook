@@ -1,0 +1,8 @@
+Django>=5.0
+django-cors-headers
+djangorestframework
+gunicorn
+python-environ
+requests
+pymysql
+djangorestframework-simplejwt
