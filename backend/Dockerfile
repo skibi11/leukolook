@@ -26,7 +26,7 @@ RUN mkdir -p /app/api/models
 
 # Use wget to download the model from your GitHub Release into the correct directory
 # !!! REPLACE THE URL WITH THE ONE YOU COPIED !!!
-RUN wget -O /app/api/models/MobileNetV1_best.keras "https://github.com/skibi11/leukolook-backend/releases/download/v1.0/MobileNetV1_best.keras"
+RUN wget -O /app/api/models/MobileNetV1_best.keras "https://github.com/skibi11/leukolook/releases/download/v1.0/MobileNetV1_best.keras"
 
 # Copy the rest of your application's code into the container
 COPY . .
