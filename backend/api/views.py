@@ -12,6 +12,7 @@ HF_PIPELINE_URL = "https://skibi11-leukolook-api.hf.space/detect/"
 
 @method_decorator(csrf_exempt, name='dispatch')
 class EyeDetectionView(APIView):
+    authentication_classes = []  # Disables DRF's internal CSRF check
     permission_classes = [AllowAny]
     def post(self, request, *args, **kwargs):
         image_file = request.data.get('image')
