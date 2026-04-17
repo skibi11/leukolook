@@ -1,6 +1,8 @@
 # in api/views.py
 
 import requests
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -8,6 +10,7 @@ from rest_framework.permissions import AllowAny
 
 HF_PIPELINE_URL = "https://skibi11-leukolook-api.hf.space/detect/"
 
+@method_decorator(csrf_exempt, name='dispatch')
 class EyeDetectionView(APIView):
     permission_classes = [AllowAny]
     def post(self, request, *args, **kwargs):
